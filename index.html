@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Miguel Lobo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="grid-container">
+        <div class="item name-column">
+            <h1 class="vertical-text">Miguel Lobo</h1>
+        </div>
+        <div class="item logo-module">
+            <img src="images/original-caixa-alta.png" alt="Logo Miguel Lobo" class="logo-img">
+        </div>
+        <div class="item welcome-module">
+            <div class="welcome">
+                Bem-vindo!<br>
+                пожалуйста!<br>
+                You are welcome!<br>
+                Vítejte!<br>
+                ¡no hay de qué!<br>
+                Dobrodošli!
+            </div>
+        </div>
+        <div class="item nav-menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="divider-short"></div>
+    </div> <!-- 🔴 Fecha o Grid-Container corretamente -->
+
+    <!-- 🎥 Slideshow abaixo do cabeçalho e centralizado -->
+    <div class="slideshow-wrapper">
+        <div class="slideshow-container">
+            <div class="slide">
+                <a href="https://vimeo.com/1057917860" target="_blank">
+                    <iframe src="https://player.vimeo.com/video/1057917860?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://vimeo.com/1034138614" target="_blank">
+                    <iframe src="https://player.vimeo.com/video/1034138614?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://vimeo.com/1034133784" target="_blank">
+                    <iframe src="https://player.vimeo.com/video/1034133784?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </a>
+            </div>
+            <div class="slide">
+                <a href="https://vimeo.com/1057917860" target="_blank">
+                    <iframe src="https://player.vimeo.com/video/1057917860?background=1&autoplay=1&loop=1&byline=0&title=0&portrait=0"
+                        frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                </a>
+            </div>
+
+            <!-- Botões de navegação -->
+            <button class="prev" onclick="plusSlides(-1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1)">&#10095;</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
