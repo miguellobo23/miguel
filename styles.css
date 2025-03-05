@@ -279,3 +279,20 @@ body {
     height: 300px; /* Ajusta altura para telas menores */
   }
 }
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Para alinhar na horizontal */
+    gap: 15px; /* Espaço entre os itens */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
