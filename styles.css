@@ -213,3 +213,69 @@ body {
   height: 500px; /* Aumenta a altura */
   border-radius: 10px;
 }
+/* Melhorando a responsividade sem alterar o design original */
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .name-column, .logo-module, .welcome-module {
+    grid-column: span 2;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .vertical-text {
+    transform: none;
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .name-column, .logo-module, .welcome-module, 
+  .education-title, .work-title, .projects-title, 
+  .education-content, .work-content, .projects-content {
+    grid-column: span 1;
+    text-align: center;
+  }
+
+  .vertical-text {
+    font-size: 18px;
+  }
+
+  .logo-img {
+    max-width: 80%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .vertical-text {
+    font-size: 16px;
+  }
+
+  .logo-img {
+    max-width: 70%;
+  }
+
+  .slide iframe {
+    height: 300px; /* Ajusta altura para telas menores */
+  }
+}
