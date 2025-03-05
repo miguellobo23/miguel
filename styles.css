@@ -279,3 +279,29 @@ body {
     height: 300px; /* Ajusta altura para telas menores */
   }
 }
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    background-color: #ddd;
+}
