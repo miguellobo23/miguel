@@ -1,0 +1,317 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.5;
+  background-color: #fff;
+  color: #000;
+  padding: 20px;
+  cursor: default;
+}
+
+/* Configuração do Grid */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1600px;
+  position: relative;
+}
+
+/* Nome alinhado à esquerda */
+.name-column {
+  grid-column: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: -50px;
+}
+
+.vertical-text {
+  transform: rotate(-90deg);
+  font-size: 18px;
+  text-align: left;
+}
+
+/* Logotipo */
+.logo-module {
+  grid-column: 2;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: -50px;
+}
+
+.logo-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mensagem de boas-vindas */
+.welcome-module {
+  grid-column: 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: -50px;
+}
+
+.welcome {
+  text-align: left;
+  font-size: 16px;
+}
+
+/* Menu de navegação */
+.nav-menu {
+  grid-column: 4;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: -50px;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-menu ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.nav-menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Linha divisória */
+.divider-short {
+  border-top: 2px solid black;
+  width: 60%;
+  margin: 20px auto;
+}
+
+/* Títulos das colunas */
+.education-title,
+.work-title,
+.projects-title,
+.social-title {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Posições das colunas */
+.education-title { grid-column: 1 / 2; }
+.work-title { grid-column: 2 / 3; }
+.projects-title { grid-column: 3 / 4; }
+.social-title { grid-column: 4 / 5; }
+
+.education-content { grid-column: 1 / 2; }
+.work-content { grid-column: 2 / 3; }
+.projects-content { grid-column: 3 / 4; }
+.social-content { grid-column: 4 / 5; }
+
+/* Estilo dos conteúdos */
+.education-content,
+.work-content,
+.projects-content,
+.social-content {
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.education-content ul,
+.work-content ul,
+.projects-content ul,
+.social-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.education-content ul li,
+.work-content ul li,
+.projects-content ul li,
+.social-content ul li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .name-column, .logo-module, .welcome-module, .nav-menu {
+    grid-column: span 2;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .vertical-text {
+    transform: none;
+    font-size: 20px;
+  }
+
+  .logo-img {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .name-column, .logo-module, .welcome-module, .nav-menu,
+  .education-title, .work-title, .projects-title, .social-title,
+  .education-content, .work-content, .projects-content, .social-content {
+    grid-column: span 1;
+    text-align: center;
+  }
+
+  .vertical-text {
+    font-size: 18px;
+  }
+
+  .logo-img {
+    max-width: 80%;
+  }
+
+  .nav-menu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .grid-container {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .vertical-text {
+    font-size: 16px;
+  }
+
+  .logo-img {
+    max-width: 70%;
+  }
+
+  .slide iframe {
+    height: 300px;
+  }
+
+  .welcome {
+    font-size: 14px;
+  }
+
+  .nav-menu ul li a {
+    font-size: 16px;
+  }
+}
+
+#ok, #okok, #okokok {
+  padding-bottom: 100px;
+}
+/* 🎥 Estilos para o slideshow */
+
+.slideshow-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 80vh; /* altura do slideshow em % da janela */
+  margin-top: 40px;
+  position: relative;
+}
+
+.slideshow-container {
+  width: 90%;
+  height: 100%;
+  position: relative;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+}
+
+.slide iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+  object-fit: cover;
+}
+/* ✨ Botões de navegação com estilo moderno e minimalista */
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #333;
+  color: #fff;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.prev {
+  left: -60px;
+}
+
+.next {
+  right: -60px;
+}
+
+@media (max-width: 768px) {
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+}
